@@ -50,11 +50,11 @@ let question = document.getElementById("question");
 
 //identify the length of array
 let randomQuestionLength = quizData.length;
-console.log(randomQuestionLength);
+//console.log(randomQuestionLength);
 
 //questions randomly generated
 let randomQuestion = Math.floor(Math.random() * randomQuestionLength)
-console.log(randomQuestion);
+    //console.log(randomQuestion);
 
 let quiz = quizData[randomQuestion];
 // console.log(quiz.question);
@@ -86,6 +86,14 @@ let dResult = quiz.d;
 dAns.innerText = dResult;
 
 
+//correct answer
+let correct = quiz.correct;
+console.log(correct);
+
+//selected ans
+let selectAns = document.querySelector('input[name="answer"]:checked');
+// selectAns.addEventListener("click", answerfun);
+console.log(selectAns);
 
 
 
@@ -100,7 +108,9 @@ function deselectAnswers() {}
 function getSelected() {
 
 }
-
+let submitBtn = document.getElementById("submit");
 submitBtn.addEventListener('click', () => {
+    let ans = document.getElementsByName("answer");
+    console.log(ans.value);
 
 })
